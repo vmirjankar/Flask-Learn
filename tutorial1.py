@@ -11,9 +11,9 @@ def home():
 def user(name):
 	return f"Hello {name}!"
 
-@app.route("/admin")
+@app.route("/admin/")
 def admin():
-	return redirect(url_for("home")) #redirects to the specified function
+	return redirect(url_for("user", name="Admin!")) #redirects to the specified function
 
 if __name__=="__main__":
 	#run app
